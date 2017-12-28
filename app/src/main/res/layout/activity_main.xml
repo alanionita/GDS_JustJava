@@ -7,6 +7,27 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/topings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Topings"
+        android:textAllCaps="true" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:paddingLeft="24dp"
+        android:gravity="center_vertical"
+        android:text="Whipped Cream"
+        android:textSize="@dimen/standard_font_size"
+        />
+
+    <TextView
         android:id="@+id/quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,7 +56,7 @@
             android:padding="8dp"
             android:text="0"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="@dimen/standard_font_size" />
 
         <Button
             android:layout_width="48dp"
@@ -62,7 +83,7 @@
         android:layout_marginTop="16dp"
         android:text="$0"
         android:textColor="@android:color/black"
-        android:textSize="16sp" />
+        android:textSize="@dimen/standard_font_size" />
 
     <Button
         android:id="@+id/order_button"
