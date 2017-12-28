@@ -59,16 +59,31 @@ public class MainActivity extends AppCompatActivity {
      * @return an order summary String
      */
     private String createOrderSummary (int price){
-        return "Name:Alan\nAdd Whipped Cream? " + whippedCreamIsChecked() + " \nQuantity: "+ quantity + "\nTotal: £" + price + "\nThank you!";
+        return "Name:Alan"
+                + "\nAdd Whipped Cream? " + whippedCreamIsChecked()
+                + "\nAdd Chocolate Sauce? " + chocolateSauceIsChecked()
+                + "\nQuantity: " + quantity
+                + "\nTotal: £" + price
+                + "\nThank you!";
     };
 
     /**
-     * Check the state of checkBox and returns a boolean
+     * Checks the state of the Whipped Cream CheckBox and returns a boolean
      *
      * @return a checked state boolean
      */
     private Boolean whippedCreamIsChecked () {
-        final CheckBox checkBox = (CheckBox) findViewById(R.id.checkbox);
+        final CheckBox checkBox = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
+        return checkBox.isChecked();
+    };
+
+    /**
+     * Checks the state of the Chocolate Sauce CheckBox and returns a boolean
+     *
+     * @return a checked state boolean
+     */
+    private Boolean chocolateSauceIsChecked () {
+        final CheckBox checkBox = (CheckBox) findViewById(R.id.chocolate_sauce_checkbox);
         return checkBox.isChecked();
     };
 
