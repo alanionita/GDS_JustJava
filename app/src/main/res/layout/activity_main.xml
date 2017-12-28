@@ -18,7 +18,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="16dp"
             android:inputType="textCapWords"
-            android:hint="Name"
+            android:hint="@string/name"
             />
 
         <TextView
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="Topings"
+            android:text="@string/toppings"
             android:textAllCaps="true" />
 
         <CheckBox
@@ -38,7 +38,7 @@
             android:layout_marginTop="16dp"
             android:gravity="center_vertical"
             android:paddingLeft="24dp"
-            android:text="Whipped Cream"
+            android:text="@string/whipped_cream"
             android:textSize="@dimen/standard_font_size" />
 
         <CheckBox
@@ -49,7 +49,7 @@
             android:layout_marginTop="16dp"
             android:gravity="center_vertical"
             android:paddingLeft="24dp"
-            android:text="Chocolate Sauce"
+            android:text="@string/chocolate"
             android:textSize="@dimen/standard_font_size" />
 
         <TextView
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="Quantity"
+            android:text="@string/quantity"
             android:textAllCaps="true" />
 
         <LinearLayout
@@ -79,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="0"
+                android:text="@string/initial_quantity_value"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/standard_font_size" />
 
@@ -99,7 +99,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:onClick="submitOrder"
-            android:text="Order" />
+            android:text="@string/order" />
 
     </LinearLayout>
 </ScrollView>
