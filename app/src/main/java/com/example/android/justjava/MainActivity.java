@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
      * @return an order summary String
      */
     private String createOrderSummary (int price){
-        return "Name:Alan"
+        return "Name: " + getName()
                 + "\nAdd Whipped Cream? " + whippedCreamIsChecked()
                 + "\nAdd Chocolate Sauce? " + chocolateSauceIsChecked()
                 + "\nQuantity: " + quantity
@@ -85,6 +86,16 @@ public class MainActivity extends AppCompatActivity {
     private Boolean chocolateSauceIsChecked () {
         final CheckBox checkBox = (CheckBox) findViewById(R.id.chocolate_sauce_checkbox);
         return checkBox.isChecked();
+    };
+
+    /**
+     * Gets the text from the Name field
+     *
+     * @return a string with the name
+     */
+    private String getName () {
+        final EditText name = (EditText) findViewById(R.id.name_field);
+        return name.getText().toString();
     };
 
 
