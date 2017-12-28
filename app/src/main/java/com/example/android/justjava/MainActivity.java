@@ -47,19 +47,20 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Calculates the price of the order.
      *
-     * @return total price, with a price per cup of $5
+     * Makes use of whippedCreamIsChecked and chocolateSauceIsChecked in order to calculate topings variable
+     *
+     * @return total price, with a price per cup of £5, whippedCream £1, chocolateSauce £2
      */
     private int calculatePrice() {
-        int basePrice = quantity * 5;
-        int topingsPrice = 0;
-        if (whippedCreamIsChecked() && chocolateSauceIsChecked()) {
-            topingsPrice = quantity * 3;
-        } else if (chocolateSauceIsChecked()) {
-            topingsPrice = quantity * 2;
+        int basePrice = 5;
+        if (chocolateSauceIsChecked() && whippedCreamIsChecked()) {
+            basePrice += 3;
         } else if (whippedCreamIsChecked()) {
-            topingsPrice = quantity * 1;
+            basePrice += 1;
+        } else if (chocolateSauceIsChecked()) {
+            basePrice += 2;
         }
-        return basePrice + topingsPrice;
+        return basePrice * quantity;
     }
 
     /**
