@@ -50,7 +50,16 @@ public class MainActivity extends AppCompatActivity {
      * @return total price, with a price per cup of $5
      */
     private int calculatePrice() {
-        return quantity * 5;
+        int basePrice = quantity * 5;
+        int topingsPrice = 0;
+        if (whippedCreamIsChecked() && chocolateSauceIsChecked()) {
+            topingsPrice = quantity * 3;
+        } else if (chocolateSauceIsChecked()) {
+            topingsPrice = quantity * 2;
+        } else if (whippedCreamIsChecked()) {
+            topingsPrice = quantity * 1;
+        }
+        return basePrice + topingsPrice;
     }
 
     /**
